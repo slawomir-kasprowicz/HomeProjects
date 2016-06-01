@@ -57,5 +57,12 @@ namespace SampleApi.Controllers
             TodoItems.Update(item);
             return new NoContentResult();
         }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            TodoItems.RemoveItem(id);
+
+        }
     }
 }

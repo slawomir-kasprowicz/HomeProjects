@@ -9,7 +9,7 @@ namespace SampleApi.Models
         void Add(TodoItem item);
         IEnumerable<TodoItem> GetAll();
         TodoItem Find(string key);
-        TodoItem RemoItem(string key);
+        TodoItem RemoveItem(string key);
         void Update(TodoItem item);
     }
 
@@ -41,7 +41,7 @@ namespace SampleApi.Models
             return item;
         }
 
-        public TodoItem RemoItem(string key)
+        public TodoItem RemoveItem(string key)
         {
             TodoItem item;
             _todos.TryGetValue(key, out item);
